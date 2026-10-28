@@ -52,16 +52,20 @@ Puoi azzerare o disattivare l'identificativo pubblicitario dalle impostazioni di
 <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>.</p>
 
 <h2>Servizi esterni contattati</h2>
-<p>Per funzionare l'app invia le tue coordinate a due servizi pubblici, che le usano per
-rispondere alla singola richiesta:</p>
+<p>Per funzionare l'app contatta questi servizi, che usano la richiesta solo per rispondere:</p>
 <ul>
-  <li><strong>Overpass API di OpenStreetMap</strong> (<a href="https://overpass-api.de/">overpass-api.de</a>)
-      — restituisce parcheggi coperti, autorimesse, tettoie, gallerie e ponti nel raggio scelto.
+  <li><strong>Elenco dei ripari d'Italia</strong> (<a href="https://riparograndine-dati.pages.dev/">riparograndine-dati.pages.dev</a>,
+      ospitato su Cloudflare Pages) — in Italia l'app scarica le porzioni dell'elenco (riquadri di
+      circa 10 km) che coprono la zona di ricerca: la coordinata esatta non viene inviata.
+      Dati © contributori OpenStreetMap, licenza ODbL.</li>
+  <li><strong>Overpass API di OpenStreetMap</strong> (overpass-api.de e server equivalenti:
+      overpass.private.coffee, maps.mail.ru, overpass.kumi.systems) — usata fuori dall'Italia o se
+      l'elenco non e' raggiungibile; riceve la coordinata e restituisce i ripari nel raggio scelto.
       Dati © contributori OpenStreetMap, licenza ODbL.</li>
   <li><strong>Open-Meteo</strong> (<a href="https://open-meteo.com/">open-meteo.com</a>)
       — restituisce le condizioni meteo previste per capire il rischio di grandine.</li>
 </ul>
-<p>Questi servizi ricevono la coordinata e l'indirizzo IP da cui arriva la richiesta, come
+<p>Questi servizi ricevono la richiesta (coordinata o riquadro) e l'indirizzo IP da cui arriva la richiesta, come
 avviene per qualunque sito visitato. Non ricevono il tuo nome né un identificativo dell'app.</p>
 
 <h2>Dati salvati sul telefono</h2>
